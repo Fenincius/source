@@ -35,9 +35,9 @@ while read -p "Enter the number of threads to use for mining (max ${NUM_CORES}):
 	fi
 done
 
-POOLSERVER_EU='eu.sushipool.com'
-POOLSERVER_US='us-east.sushipool.com'
-POOLSERVER_ASIA='asia.sushipool.com'
+POOLSERVER_EU='ws://eu1.nimiq.skypool.org'
+POOLSERVER_US='ws://us1.nimiq.skypool.org'
+POOLSERVER_ASIA='ws://hk1.nimiq.skypool.org'
 
 echo
 echo "🍣 Sushi Servers:"
@@ -46,7 +46,7 @@ echo "2. ${POOLSERVER_US}"
 echo "3. ${POOLSERVER_ASIA}"
 
 POOLSERVER=''
-POOLPORT=443
+POOLPORT=4000
 while read -p "Enter the pool server nearest to you: `echo $'\n> '`" pool; do
     if ! [ "$pool" -eq "$pool" ] 2> /dev/null; then
         echo "Please select a valid server (1, 2 or 3)."
